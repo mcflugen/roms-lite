@@ -187,7 +187,7 @@ if [ -n "${USE_MPIF90:+1}" ]; then
 
     gfortran )
       if [ "${which_MPI}" = "mpich2" ]; then
-        export PATH=$PREFIX/bin:$PATH
+        export PATH=$MPICH2_PREFIX/bin:$PATH
       elif [ "${which_MPI}" = "openmpi" ]; then
         export PATH=/opt/gfortransoft/openmpi/bin:$PATH
       fi
@@ -362,12 +362,12 @@ if [ -n "${USE_MY_LIBS:+1}" ]; then
             export NETCDF_INCDIR=/opt/gfortransoft/openmpi/netcdf4/include
           fi
         else
-          export       NC_CONFIG=$PREFIX/bin/nc-config
-          export   NETCDF_INCDIR=$PREFIX/include
+          export       NC_CONFIG=$NETCDF_PREFIX/bin/nc-config
+          export   NETCDF_INCDIR=$NETCDF_PREFIX/include
         fi
       else
-        export   NETCDF_INCDIR=$PREFIX/include
-        export   NETCDF_LIBDIR=$PREFIX/lib
+        export   NETCDF_INCDIR=$NETCDF_PREFIX/include
+        export   NETCDF_LIBDIR=$NETCDF_PREFIX/lib
       fi
       ;;
 
