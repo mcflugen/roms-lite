@@ -1,0 +1,28 @@
+package:
+  name: roms
+  version: "lite"
+
+source:
+  fn: esmf_6_3_0rp1_src.tar.gz
+  url: http://sourceforge.net/projects/esmf/files/latest/download?source=directory
+source:
+  git_url: https://github.com/mcflugen/roms-lite
+
+
+requirements:
+  build:
+    - gcc
+    - libgfortran
+    - mpich2
+    - libnetcdf
+    - netcdff
+
+  run:
+    - gcc
+    - libgfortran
+    - mpich2
+    - libnetcdf
+    - netcdff
+
+build:
+  string: {{ environ.get('BUILD_STR', '') }}
