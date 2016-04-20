@@ -142,8 +142,8 @@ export     MY_PROJECT_DIR=${MY_ROOT_DIR}/build
  export           USE_MPI=on            # distributed-memory parallelism
  export        USE_MPIF90=on            # compile with mpif90 script
 #export         which_MPI=mpich         # compile with MPICH library
-export         which_MPI=mpich2        # compile with MPICH2 library
-# export         which_MPI=openmpi       # compile with OpenMPI library
+# export         which_MPI=mpich2        # compile with MPICH2 library
+export         which_MPI=openmpi       # compile with OpenMPI library
 
 #export        USE_OpenMP=on            # shared-memory parallelism
 
