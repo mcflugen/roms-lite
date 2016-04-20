@@ -4,7 +4,7 @@ import subprocess
 
 class RomsLite(object):
     _command = 'mpirun'
-    _args = ['-n 8', 'oceanM', './External/ocean_riverplume2.in']
+    _args = ['-n', '8', 'oceanM', './External/ocean_riverplume2.in']
     _env = None
 
     @property
