@@ -1,0 +1,14 @@
+author: 'Hernan G. Arango'
+email: arango@marine.rutgers.edu
+license: MIT
+summary: ROMS is a Free-surface, terrain-following, orthogonal curvilinear,
+  primitive equations ocean model. Its dynamical kernel is comprised of
+  four separate models including the nonlinear, tangent linear, representer
+  tangent linear, and adjoint models. It has multiple model coupling (ESMF,
+  MCT) and multiple grid nesting (composed, mosaics, refinement)
+  capabilities. The code uses a coarse-grained parallelization with both
+  shared-memory (OpenMP) and distributed-memory (MPI) paradigms coexisting
+  together and activated via C-preprocessing.
+url: http://csdms.colorado.edu/wiki/Model_help:ROMS
+version: lite
+

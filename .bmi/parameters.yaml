@@ -1,0 +1,138 @@
+number_of_steps:
+  description: Number of time steps
+  value:
+    type: int
+    default: 14400
+    range:
+      min: 1
+      max: 3153600000
+    units: '-'
+time_step:
+  description: Model time step
+  value:
+    type: float
+    default: 120.0
+    range:
+      min: 1.0
+      max: 31536000.0
+    units: s
+mud_class_0_settling_velocity:
+  description:
+    Particle settling velocity for suspended cohesive sediment class 0
+  value:
+    type: float
+    default: 0.05
+    range:
+      min: 0.
+      max: 10.
+    units: mm/s
+mud_class_1_settling_velocity:
+  description:
+    Particle settling velocity for suspended cohesive sediment class 1
+  value:
+    type: float
+    default: 0.1
+    range:
+      min: 0.
+      max: 10.
+    units: mm/s
+mud_class_2_settling_velocity:
+  description:
+    Particle settling velocity for suspended cohesive sediment class 2
+  value:
+    type: float
+    default: 1.0
+    range:
+      min: 0.
+      max: 10.
+    units: mm/s
+mud_class_0_critical_shear_stress_for_erosion:
+  description:
+    Critical shear stress for erosion for suspended cohesive sediment class 0
+  value:
+    type: float
+    default: 0.04
+    range:
+      min: 0.
+      max: 10.
+    units: N/m^2
+mud_class_1_critical_shear_stress_for_erosion:
+  description:
+    Critical shear stress for erosion for suspended cohesive sediment class 1
+  value:
+    type: float
+    default: 0.14
+    range:
+      min: 0.
+      max: 10.
+    units: N/m^2
+mud_class_2_critical_shear_stress_for_erosion:
+  description:
+    Critical shear stress for erosion for suspended cohesive sediment class 2
+  value:
+    type: float
+    default: 0.48
+    range:
+      min: 0.
+      max: 10.
+    units: N/m^2
+mud_class_0_critical_shear_stress_for_deposition:
+  description:
+    Critical shear stress for deposition for suspended cohesive sediment class 0
+  value:
+    type: float
+    default: 0.1
+    range:
+      min: 0.
+      max: 10.
+    units: N/m^2
+mud_class_1_critical_shear_stress_for_deposition:
+  description:
+    Critical shear stress for deposition for suspended cohesive sediment class 1
+  value:
+    type: float
+    default: 0.1
+    range:
+      min: 0.
+      max: 10.
+    units: N/m^2
+mud_class_2_critical_shear_stress_for_deposition:
+  description:
+    Critical shear stress for deposition for suspended cohesive sediment class 2
+  value:
+    type: float
+    default: 0.1
+    range:
+      min: 0.
+      max: 10.
+    units: N/m^2
+sand_settling_velocity:
+  description:
+    Particle settling velocity for non-cohesive sediment
+  value:
+    type: float
+    default: 1.0
+    range:
+      min: 0.
+      max: 10.
+    units: mm/s
+sand_critical_shear_stress_for_erosion:
+  description:
+    Critical shear stress for erosion for non-cohesive sediment
+  value:
+    type: float
+    default: 0.1
+    range:
+      min: 0.
+      max: 10.
+    units: N/m^2
+sand_critical_shear_stress_for_deposition:
+  description:
+    Critical shear stress for deposition for non-cohesive sediment
+  value:
+    type: float
+    default: 0.1
+    range:
+      min: 0.
+      max: 10.
+    units: N/m^2

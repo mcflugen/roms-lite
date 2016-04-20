@@ -1,0 +1,6 @@
+name: RomsLite
+language: python
+package: roms_lite
+class: RomsLite
+initialize_args: "./External/ocean_riverplume2.in"
+
