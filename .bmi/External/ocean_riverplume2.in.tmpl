@@ -73,8 +73,6 @@
 ! Input variable information file name.  This file needs to be processed
 ! first so all information arrays can be initialized properly.
 
-!     VARNAME = External/varinfo.dat
-!     VARNAME = /home/jumo1218/Riverplume_classactivity/Poverty_1/trunk/ROMS/External/varinfo.dat
      VARNAME = ./External/varinfo.dat
 
 ! Number of nested grids.
@@ -761,9 +759,6 @@ Dout(iTvdif) == T T     ! temp_vdiff, ...    vertical diffusion
 
 ! Input Sources/Sinks forcing (like river runoff) file name.
 
-!     SSFNAME == ocean_rivers.in
-!     SSFNAME ==/pacific/export/home2/moriarty/ROMS/Ideal_shelf/Forcing/river.nc
-!     SSFNAME ==/home/jumo1218/Riverplume_classactivity/Forcing/river.nc
      SSFNAME ==./Forcing/river.nc
 
 ! Input forcing NetCDF file name(s).  The USER has the option to enter
@@ -780,9 +775,6 @@ Dout(iTvdif) == T T     ! temp_vdiff, ...    vertical diffusion
 
      NFFILES == 1                          ! number of unique forcing files
 
-!     FRCNAME == External/rivers.nc      ! forcing file 1, grid 1
-!     FRCNAME ==/pacific/export/home2/moriarty/ROMS/Ideal_shelf/Forcing/waves.nc
-!     FRCNAME ==/home/jumo1218/Riverplume_classactivity/Forcing/waves.nc
      FRCNAME ==./Forcing/waves.nc
 
 ! Output NetCDF file names, [1:Ngrids].
