@@ -80,18 +80,13 @@ done
 # determine the name of the ".h" header file with the application
 # CPP definitions.
 
-#export   ROMS_APPLICATION=UPWELLING
 export   ROMS_APPLICATION=RIVERPLUME2
 
 # Set a local environmental variable to define the path to the directories
 # where all this project's files are kept.
 
-#jmm
-#export        MY_ROOT_DIR=/pacific/export/home2/moriarty/ROMS/Ideal_shelf/Poverty_1
 export        MY_ROOT_DIR=$(pwd)
 export     MY_PROJECT_DIR=${MY_ROOT_DIR}/build
-#export        MY_ROOT_DIR=${HOME}/ocean/repository
-#export     MY_PROJECT_DIR=${PWD}
 
 # The path to the user's local current ROMS source code.
 #
@@ -103,10 +98,7 @@ export     MY_PROJECT_DIR=${MY_ROOT_DIR}/build
 # machine. This script is designed to more easily allow for differing paths
 # to the code and inputs on differing machines.
 
-#jmm
-##export       MY_ROMS_SRC=${MY_ROOT_DIR}/branches/arango
- export       MY_ROMS_SRC=${MY_ROOT_DIR}/roms
-# export       MY_ROMS_SRC=${MY_ROOT_DIR}/trunk4
+export       MY_ROMS_SRC=${MY_ROOT_DIR}/roms
 
 # Set path of the directory containing makefile configuration (*.mk) files.
 # The user has the option to specify a customized version of these files
@@ -114,8 +106,7 @@ export     MY_PROJECT_DIR=${MY_ROOT_DIR}/build
 # ${MY_ROMS_SRC}/Compilers. If this is the case, the you need to keep
 # these configurations files up-to-date.
 
- export         COMPILERS=${MY_ROMS_SRC}/Compilers
-#export         COMPILERS=${HOME}/Compilers
+export         COMPILERS=${MY_ROMS_SRC}/Compilers
 
 # Set tunable CPP options.
 #
@@ -141,7 +132,7 @@ export     MY_PROJECT_DIR=${MY_ROOT_DIR}/build
 
  export           USE_MPI=on            # distributed-memory parallelism
  export        USE_MPIF90=on            # compile with mpif90 script
-#export         which_MPI=mpich         # compile with MPICH library
+# export         which_MPI=mpich         # compile with MPICH library
 export         which_MPI=mpich2        # compile with MPICH2 library
 # export         which_MPI=openmpi       # compile with OpenMPI library
 
@@ -150,8 +141,8 @@ export         which_MPI=mpich2        # compile with MPICH2 library
 #jmm
 # export              FORT=ifort
 export              FORT=gfortran
-#export              FORT=pgi
-#export              FORT=g95
+# export              FORT=pgi
+# export              FORT=g95
 
 # export         USE_DEBUG=on            # use Fortran debugging flags
  export         USE_LARGE=on            # activate 64-bit compilation
@@ -196,8 +187,6 @@ if [ -n "${USE_MPIF90:+1}" ]; then
 
     gfortran )
       if [ "${which_MPI}" = "mpich2" ]; then
-#       export PATH=/opt/gfortransoft/mpich2/bin:$PATH
-        # export PATH=/opt/mpich2/gnu/bin:$PATH
         export PATH=$PREFIX/bin:$PATH
       elif [ "${which_MPI}" = "openmpi" ]; then
         export PATH=/opt/gfortransoft/openmpi/bin:$PATH
@@ -373,18 +362,10 @@ if [ -n "${USE_MY_LIBS:+1}" ]; then
             export NETCDF_INCDIR=/opt/gfortransoft/openmpi/netcdf4/include
           fi
         else
-#          export       NC_CONFIG=/opt/gfortransoft/serial/netcdf4/bin/nc-config
-#          export   NETCDF_INCDIR=/opt/gfortransoft/serial/netcdf4/include
-          # export       NC_CONFIG=/usr/local/netcdf/4.3-gcc/bin/nc-config
-          # export   NETCDF_INCDIR=/usr/local/netcdf/4.3-gcc/include
           export       NC_CONFIG=$PREFIX/bin/nc-config
           export   NETCDF_INCDIR=$PREFIX/include
         fi
       else
-#        export     NETCDF_INCDIR=/opt/gfortransoft/serial/netcdf3/include
-#        export     NETCDF_LIBDIR=/opt/gfortransoft/serial/netcdf3/lib
-        # export   NETCDF_INCDIR=/usr/local/netcdf/4.3-gcc/include
-        # export   NETCDF_LIBDIR=/usr/local/netcdf/4.3-gcc/lib
         export   NETCDF_INCDIR=$PREFIX/include
         export   NETCDF_LIBDIR=$PREFIX/lib
       fi
