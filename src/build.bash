@@ -197,7 +197,8 @@ if [ -n "${USE_MPIF90:+1}" ]; then
     gfortran )
       if [ "${which_MPI}" = "mpich2" ]; then
 #       export PATH=/opt/gfortransoft/mpich2/bin:$PATH
-        export PATH=/opt/mpich2/gnu/bin:$PATH
+        # export PATH=/opt/mpich2/gnu/bin:$PATH
+        export PATH=$PREFIX/bin:$PATH
       elif [ "${which_MPI}" = "openmpi" ]; then
         export PATH=/opt/gfortransoft/openmpi/bin:$PATH
       fi
