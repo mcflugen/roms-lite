@@ -43,19 +43,21 @@
 
 ifdef USE_NETCDF4
         NC_CONFIG ?= nc-config
-#    NETCDF_INCDIR ?= $(shell $(NC_CONFIG) --prefix)/include
-    NETCDF_INCDIR ?= /usr/local/netcdf/4.3-gcc/include
+    NETCDF_INCDIR ?= $(shell $(NC_CONFIG) --prefix)/include
+#    NETCDF_INCDIR ?= /usr/local/netcdf/4.3-gcc/include
              LIBS := $(shell $(NC_CONFIG) --flibs)
 else
 #    NETCDF_INCDIR ?= /usr/local/include
 #    NETCDF_INCDIR ?= /oldhome/bevera/MYCODE/NETCDF3.6.3.ifort/include
 #    NETCDF_INCDIR ?= ${NETCDF}/include
 #    NETCDF_INCDIR ?= /home/csdms/tools/netcdf/4.1.3/include
-    NETCDF_INCDIR ?= /usr/local/netcdf/4.3-gcc/include
+#    NETCDF_INCDIR ?= /usr/local/netcdf/4.3-gcc/include
+    NETCDF_INCDIR := $(NETCDF_PREFIX)/include
 #    NETCDF_INCDIR ?= /home/csdms/tools/netcdf/4.1.3/include
 #    NETCDF_LIBDIR ?= /usr/local/lib
 #    NETCDF_LIBDIR ?= /home/csdms/tools/netcdf/4.1.3/lib
-    NETCDF_LIBDIR ?= /usr/local/netcdf/4.3-gcc/lib
+#    NETCDF_LIBDIR ?= /usr/local/netcdf/4.3-gcc/lib
+    NETCDF_LIBDIR := $(NETCDF_PREFIX)/lib
 #    NETCDF_LIBDIR ?= /home/csdms/tools/netcdf/4.1.3/lib
              LIBS := -L$(NETCDF_LIBDIR) -lnetcdf
 endif
