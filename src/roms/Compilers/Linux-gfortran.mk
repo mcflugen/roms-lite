@@ -26,7 +26,7 @@
            FFLAGS += -frepack-arrays
               CPP := /usr/bin/cpp
          CPPFLAGS := -P -traditional
-          LDFLAGS += -static -lcurl -lnetcdff
+          LDFLAGS +=
                AR := ar
           ARFLAGS := -r
             MKDIR := mkdir -p
