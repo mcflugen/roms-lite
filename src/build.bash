@@ -146,7 +146,7 @@ export              FORT=gfortran
 
 # export         USE_DEBUG=on            # use Fortran debugging flags
  export         USE_LARGE=on            # activate 64-bit compilation
-export       USE_NETCDF4=on            # compile with NetCDF-4 library
+# export       USE_NETCDF4=on            # compile with NetCDF-4 library
 export   USE_PARALLEL_IO=on            # Parallel I/O with Netcdf-4/HDF5
 
 #export       USE_MY_LIBS=on            # use my library paths below
