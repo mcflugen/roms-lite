@@ -23,10 +23,10 @@
 # First the defaults
 #
                FC := gfortran
-           FFLAGS := -frepack-arrays -static -lcurl
+           FFLAGS := -frepack-arrays -static -lcurl -lnetcdff
               CPP := /usr/bin/cpp
          CPPFLAGS := -P -traditional
-          LDFLAGS := -static -lcurl
+          LDFLAGS := -static -lcurl -lnetcdff
                AR := ar
           ARFLAGS := -r
             MKDIR := mkdir -p
