@@ -124,7 +124,7 @@ ad_LBC(isTvar) ==   Per     Per     Per     Per      ! idsed(:), compact
 
 ! Particle settling velocity (mm/s).
 
-    MUD_WSED == {mud_class_0_settling_velocity} {mud_class_1_settling_velocity} {mud_class_3_settling_velocity}
+    MUD_WSED == {mud_class_0_settling_velocity} {mud_class_1_settling_velocity} {mud_class_2_settling_velocity}
 
 ! Surface erosion rate (kg/m2/s).
 
