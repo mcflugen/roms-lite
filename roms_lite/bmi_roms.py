@@ -11,6 +11,9 @@ class RomsLite(object):
     def args(self):
         return [self._command] + (self._args or [])
 
+    def get_component_name(self):
+        return 'ROMS-Lite'
+
     def initialize(self, filename):
         pass
 
