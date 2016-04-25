@@ -22,3 +22,9 @@ class RomsLite(object):
 
     def finalize(self):
         pass
+
+    def get_input_var_names(self):
+        return ()
+
+    def get_output_var_names(self):
+        return ()
