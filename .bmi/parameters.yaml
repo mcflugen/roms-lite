@@ -136,3 +136,13 @@ sand_critical_shear_stress_for_deposition:
       min: 0.
       max: 10.
     units: N/m^2
+river_forcing_file:
+  description: Input Sources/Sinks forcing (like river runoff)
+  value:
+    type: file
+    default: river.nc
+waves_forcing_file:
+  description: Input wave conditions forcing
+  value:
+    type: file
+    default: waves.nc

@@ -759,7 +759,7 @@ Dout(iTvdif) == T T     ! temp_vdiff, ...    vertical diffusion
 
 ! Input Sources/Sinks forcing (like river runoff) file name.
 
-     SSFNAME ==./Forcing/river.nc
+     SSFNAME ==./Forcing/{river_forcing_file}
 
 ! Input forcing NetCDF file name(s).  The USER has the option to enter
 ! several file names for each nested grid.  For example, the USER may
@@ -775,7 +775,7 @@ Dout(iTvdif) == T T     ! temp_vdiff, ...    vertical diffusion
 
      NFFILES == 1                          ! number of unique forcing files
 
-     FRCNAME ==./Forcing/waves.nc
+     FRCNAME ==./Forcing/{waves_forcing_file}
 
 ! Output NetCDF file names, [1:Ngrids].
 
