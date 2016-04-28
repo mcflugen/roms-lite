@@ -136,6 +136,15 @@ sand_critical_shear_stress_for_deposition:
       min: 0.
       max: 10.
     units: N/m^2
+time_steps_between_output:
+  description: Number of time-steps between writing fields into history file.
+  value:
+    type: int
+    default: 180
+    range:
+      min: 1
+      max: 1000000
+    units: "-"
 river_forcing_file:
   description: Input Sources/Sinks forcing (like river runoff)
   value:
